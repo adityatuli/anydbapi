@@ -1,0 +1,38 @@
+== AnyDBAPI
+
+AnyDBAPI is a Sinatra application that allows exposing any database query result as a JSON streaming API. Tested with Ruby 1.9.3 on Windows Server 2008 R2, Windows ODBC, and against Sybase Advantage, MySQL, and PostgreSQL databases. This is the first release of AnyDBAPI.
+
+== Requirements
+
+Sinatra
+Nokogiri
+JSON
+DBI
+Mongrel 1.2.0.pre2     
+Win32-service			# Used for installing under Windows as a service
+
+== Getting Started
+
+bundle install
+rackup -E "production"	# To run development mode use rackup -E "development"
+
+Note: Development mode has additional logging turned on which would be useful for testing connections and/or debugging queries.
+
+== Running as a Windows service
+
+# serviceinstall.rb
+ruby serviceinstall.rb install
+
+Note: This is a helper ruby program that will install AnyDBAPI as a windows service which can then be started and stopped from the Windows Services MMC. 
+
+== Configuring
+
+# config.xml
+
+Configuration for AnyDBAPI where you can specify connections and queries. Multiple connections and queries are possible. Have a look at the example config.xml file included. 
+
+AnyDBAPI can be used to run update and insert queries too! Post your JSON payload along with the request to the appropriate query. Use chunksize in the configuration to specify the number of records that will be streamed in chunks.
+
+== Notes
+
+Remember to open port 9292 on Windows as this is blocked by default, or the specific port with Mongrel (if you've used one) as appropriate. Also setup your DSN with 32-bit ODBC under Windows. Queries are available on the route /functions/<your function name>/execute. 

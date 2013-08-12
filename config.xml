@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<configuration>
+	<settings>
+		<chunksize>500</chunksize>
+	</settings>
+	<connections>
+		<!--<connection name="ads" type="odbc">
+			<description>ODBC connection to CASH Advantage Database server</description>
+			<dsn>Test</dsn>
+			<username>AdsSys</username>
+			<password></password>
+			<encoding>iso-8859-1</encoding>
+		</connection>-->
+	</connections>
+	<functions>
+		<!--<function name="searchPCustomer">
+			<connection>adstest</connection>
+			<query>Execute procedure searchPCustomer('%customerno%', '%customername%', '%postcode%', '%contactname%', '%address%')</query>
+		</function>
+		<function name="updateCustomer">
+			<connection>ads</connection>
+			<query>Execute procedure updateCustomer('%customerno%',%companynumber%,'%searchname%','%name%','%add1%','%add2%','%add3%','%add4%','%postcode%','%telephone%','%contact%','%contactdearname%','%faxno%','%emailaddress%','%customertype%')</query>
+		</function>-->
+	</functions>
+</configuration>
