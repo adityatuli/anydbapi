@@ -8,7 +8,7 @@ Sinatra
 Nokogiri
 JSON
 DBI
-Mongrel 1.2.0.pre2     
+Mongrel 1.2.0.pre2
 Win32-service			# Used for installing under Windows as a service
 
 == Getting Started
