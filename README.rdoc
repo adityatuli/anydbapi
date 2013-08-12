@@ -21,7 +21,7 @@ Note: Development mode has additional logging turned on which would be useful fo
 == Running as a Windows service
 
 # serviceinstall.rb
-	ruby serviceinstall.rb install
+ruby serviceinstall.rb install
 
 Note: This is a helper ruby program that will install AnyDBAPI as a windows service which can then be started and stopped from the Windows Services MMC. 
 
