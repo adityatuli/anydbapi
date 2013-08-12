@@ -4,23 +4,23 @@ AnyDBAPI is a Sinatra application that allows exposing any database query result
 
 == Requirements
 
-Sinatra
-Nokogiri
-JSON
-DBI
-Mongrel 1.2.0.pre2
+Sinatra<br>
+Nokogiri<br>
+JSON<br>
+DBI<br>
+Mongrel 1.2.0.pre2<br>
 Win32-service			# Used for installing under Windows as a service
 
 == Getting Started
 
-bundle install
+bundle install<br>
 rackup -E "production"	# To run development mode use rackup -E "development"
 
 Note: Development mode has additional logging turned on which would be useful for testing connections and/or debugging queries.
 
 == Running as a Windows service
 
-# serviceinstall.rb
+# serviceinstall.rb<br>
 ruby serviceinstall.rb install
 
 Note: This is a helper ruby program that will install AnyDBAPI as a windows service which can then be started and stopped from the Windows Services MMC. 
